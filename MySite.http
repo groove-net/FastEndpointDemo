@@ -1,0 +1,35 @@
+@MySite_HostAddress = http://localhost:5169
+@id = 671d2d4817174d8bce50bc52
+
+### Get All Books
+GET {{MySite_HostAddress}}/api/books
+
+### Get Book by Id
+GET {{MySite_HostAddress}}/api/books/{{id}}
+
+### Create New Book
+POST {{MySite_HostAddress}}/api/books
+content-type: application/json
+
+{
+    "name": "Test-Book",
+    "price": 30.99,
+    "category": "Thriller",
+    "author": "John"
+}
+
+### Update Book
+PUT {{MySite_HostAddress}}/api/books/{{id}}
+content-type: application/json
+
+{
+    "name": null,
+    "price": 25.99,
+    "category": null,
+    "author": "Gabriel"
+}
+
+### Delete Book
+DELETE {{MySite_HostAddress}}/api/books/{{id}}
+
+###
